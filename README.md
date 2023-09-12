@@ -30,7 +30,7 @@ Se implementa un sistema de autorización para garantizar que solo los propietar
 Se asegura la comunicación entre el frontend y el backend mediante el uso de HTTPS.
 Documentación de API:
 
-Se genera documentación automática de la API utilizando herramientas como Swagger o DRF's Browsable API.
+Se genera documentación automática de la API utilizando herramientas como Swagger o DRF's Browsable API. 
 Tecnologías Utilizadas:
 
 ## Backend:
