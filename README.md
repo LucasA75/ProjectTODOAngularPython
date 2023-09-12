@@ -48,3 +48,4 @@ Despliegue:
 La aplicación puede desplegarse en un servidor web utilizando servicios como AWS, Heroku o cualquier otro proveedor de hosting.
 Este proyecto combina las fortalezas de Django REST framework en el backend para crear una API robusta y escalable con las capacidades de Angular en 
 el frontend para proporcionar una experiencia de usuario atractiva. Además, se centra en la seguridad y la usabilidad para ofrecer una aplicación de gestión de tareas completa y efectiva.
+
