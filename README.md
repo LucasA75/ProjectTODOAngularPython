@@ -54,6 +54,6 @@ La aplicación puede desplegarse en un servidor web utilizando servicios como AW
 Este proyecto combina las fortalezas de Django REST framework en el backend para crear una API robusta y escalable con las capacidades de Angular en 
 el frontend para proporcionar una experiencia de usuario atractiva. Además, se centra en la seguridad y la usabilidad para ofrecer una aplicación de gestión de tareas completa y efectiva.
 
-<img width="614" alt="Captura de pantalla 2023-09-12 163432" src="https://github.com/LucasA75/ProjectTODOAngularPython/assets/115661399/239bfd73-09bc-47aa-b366-<img width="833" alt="Captura de pantalla 2023-09-12 163414" src="https://github.com/LucasA75/ProjectTODOAngularPython/assets/115661399/d66e9d3e-5159-4260-a924-1abb4e029506">
-17a7f3203286">
+<img width="614" alt="Captura de pantalla 2023-09-12 163432" src="https://github.com/LucasA75/ProjectTODOAngularPython/assets/115661399/239bfd73-09bc-47aa-b366-17a7f3203286">
+<img width="833" alt="Captura de pantalla 2023-09-12 163414" src="https://github.com/LucasA75/ProjectTODOAngularPython/assets/115661399/d66e9d3e-5159-4260-a924-1abb4e029506">
 <img width="642" alt="Captura de pantalla 2023-09-12 165353" src="https://github.com/LucasA75/ProjectTODOAngularPython/assets/115661399/f73ac300-f242-4918-8876-c4e2437f993c">
