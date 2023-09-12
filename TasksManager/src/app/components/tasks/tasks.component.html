@@ -1,0 +1,66 @@
+<div *ngIf="!checkAddTask">
+  <section (click)="addTask()" class="container shadow mx-auto flex h-20 justify-center gap-4 items-center my-4">
+    <p>Agregar Tarea</p>
+    <p>+</p>
+  </section>
+</div>
+
+<div *ngIf="checkAddTask">
+  <section class="container shadow mx-auto w-fit p-6 flex min-h-[150px] justify-center gap-4  my-4">
+    <form class="flex flex-col justify-around" [formGroup]="taskForm" (submit)="submitTask()">
+      <h3 class="text-xl font-bold text-center mb-3">Describe tu tarea</h3>
+      <div>
+        <label for="title">Título : </label>
+        <input class="border-2 border-black-800" id="title" type="text" formControlName="title">
+        <p *ngIf="taskForm.get('title')?.touched && taskForm.get('title')?.hasError('required')" class="text-red-400 font-light">*Es obligatorio el titulo</p>
+      </div>
+      <div class="flex flex-col">
+        <label for="description">Descripción : </label>
+        <input class="border-2 border-black-800" id="description" type="text" formControlName="description">
+      </div>
+      <div class="flex justify-center gap-3">
+        <button type="submit" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-blue-300">Hacer Tarea</button>
+        <button (click)="cancelSubmit()" type="button" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-red-300">Cancelar</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<section class="container shadow mx-auto flex h-20 justify-around gap-4 items-center my-4" *ngFor="let task of taskList">
+  <div class="w-3/12">
+    <p class="font-light italic">Título tarea</p>
+    <p class="text-3xl font-bold">{{task.title | titlecase}}</p>
+  </div>
+  <div class="flex flex-col w-3/12">
+    <p class="font-light italic">Descripción tarea</p>
+      <p>{{task.description | lowercase}}</p>
+  </div>
+  <div class="flex gap-3 w-3/12">
+    <p class="font-light italic mb-1">Check tarea</p>
+    <input class="w-12" type="checkbox" value={{task.done}} >
+  </div>
+  <div class="flex gap-2 w-3/12">
+    <button (click)="deleteTask(task)" type="button" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-red-300">Borrar</button>
+    <button (click)="btnUpdateTask(task)" type="button" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-green-300">Editar</button>
+  </div>
+</section>
+
+<div *ngIf="checkUpdateTask">
+  <section class="container shadow mx-auto w-fit p-6 flex min-h-[150px] justify-center gap-4  my-4">
+    <form class="flex flex-col justify-around" [formGroup]="taskForm" (submit)="submitTask()">
+      <h3 class="text-xl font-bold text-center mb-3">Edita la tarea</h3>
+      <div>
+        <label for="title">Título : </label>
+        <input class="border-2 border-black-800" id="title" type="text" formControlName="title">
+      </div>
+      <div class="flex flex-col">
+        <label for="description">Descripción : </label>
+        <input class="border-2 border-black-800" id="description" type="text" formControlName="description">
+      </div>
+      <div class="flex justify-center gap-3">
+        <button type="submit" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-blue-300">Editar Tarea</button>
+        <button (click)="cancelSubmitUpdate()" type="button" class="font-semibold mt-3 w-fit p-1 px-2 shadow-md rounded bg-red-300">Cancelar</button>
+      </div>
+    </form>
+  </section>
+</div>
